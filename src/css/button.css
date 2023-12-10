@@ -1,0 +1,81 @@
+.button-div{
+    width: 100%;
+    min-height: 30px;
+    background-color: #040a29;
+    margin-bottom: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-left: 100px solid #1a1e2e;
+    border-right: 100px solid #1a1e2e;
+    line-height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.button-div button{
+    position: relative;
+    width: 180px;
+    height: 30px;
+    display: inline-block;
+    margin: 10px;
+}
+.button-div button::before,
+.button-div button::after{
+content: '';
+position: absolute;
+inset: 0;
+background: #ff0000;
+transition: 0.5s;
+}
+.button-div button span{
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #1a1e2e;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: antiquewhite;
+    border: 1px solid#040a29;
+}
+.button-div button:hover::before{
+    inset: -3px;
+}
+.button-div button:hover::after{
+    inset: -3px;
+    filter: blur(10px);
+}
+.button-div button:nth-child(1)::before,
+.button-div button:nth-child(1)::after{
+    background: linear-gradient(45deg, #1aff22, #1a1e2e, #f7ff07);
+}
+.button-div button:nth-child(2)::before,
+.button-div button:nth-child(2)::after{
+    background: linear-gradient(45deg, #ece630, #1a1e2e, #1191e0);
+}
+.button-div button:nth-child(3)::before,
+.button-div button:nth-child(3)::after{
+    background: linear-gradient(45deg, #ff1afb, #1a1e2e, #d26a0e);
+}
+.button-div button:nth-child(4)::before,
+.button-div button:nth-child(4)::after{
+    background: linear-gradient(45deg, #2537db, #1a1e2e, #8ad20e);
+}
+.button-div button span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: #ffffff12;
+    transform: skew(25deg);
+
+}
